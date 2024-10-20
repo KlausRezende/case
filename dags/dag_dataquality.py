@@ -39,7 +39,7 @@ def error():
 
 with DAG(
     dag_id=f"{parameters['config']['dag_name']}",
-    start_date=datetime(2024, 12, 1),
+    start_date=datetime(2023, 12, 1),
     schedule_interval= parameters['config']['schedule_interval'],
     catchup=False,
     default_args=default_args,
