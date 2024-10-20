@@ -34,6 +34,7 @@ Este projeto realiza o **ETL** (Extração, Transformação e Carga) de dados de
 5. Triggar a DAG: `ambev_breweries_pipeline`
      Após a finalização ela irá acionar automaticamente a pipeline de DataQuality.
 
+![image](https://github.com/user-attachments/assets/9bbfe253-7e49-4221-a242-7036b7173747)
 
 ### Monitoração
 
@@ -41,6 +42,8 @@ Foi desenvolvida 2 libs `(libs/logs.py)` para a monitoração de falhas da pipel
 - `def notification_discord(message)` ->O intuito desta função é notificar um canal do Discord enviando alguma mensagem de alerta.
 
 - `def log_callback_fail(context)` -> O intuito desta função é pegar os status de execuções das DAG's, caso o status seja 'failed' ele irá chamar a função de notificação do discord.
+
+![image](https://github.com/user-attachments/assets/6183cc13-b189-4c28-841b-22d419a2a764)
 
 
 ### Data Quality
@@ -54,8 +57,8 @@ Nos arquivo de parametros (dags/parameters_data_quality.yaml) da mesma DAG é po
 Por fim caso a tabela não esteja nos conformes de Data Quality ela irá ***alertar/notificar*** algum canal no Discord.
 
 
+![image](https://github.com/user-attachments/assets/5094cd7e-da3d-48a8-9c89-995c6c76e0b9)
 
-![image](https://github.com/user-attachments/assets/9bbfe253-7e49-4221-a242-7036b7173747)
 
 
 
