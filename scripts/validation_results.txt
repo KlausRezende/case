@@ -3,7 +3,36 @@ Expectativa: expect_column_values_to_not_be_null | Coluna: id_brewery | Sucesso:
 Expectativa: expect_column_values_to_be_unique | Coluna: id_brewery | Sucesso: True
 ------------------------------------------------------------
 Expectativa: expect_column_value_lengths_to_equal | Coluna: phone_brewery | Sucesso: False
-Detalhes da falha: {'element_count': 50, 'unexpected_count': 6, 'unexpected_percent': 12.0, 'partial_unexpected_list': ['00000000000', '00000000000', '00000000000', '00000000000', '353599107299', '00000000000'], 'missing_count': 0, 'missing_percent': 0.0, 'unexpected_percent_total': 12.0, 'unexpected_percent_nonmissing': 12.0}
+Detalhes da falha: {
+  "result": {
+    "element_count": 50,
+    "unexpected_count": 1,
+    "unexpected_percent": 2.0,
+    "partial_unexpected_list": [
+      "353599107299"
+    ],
+    "missing_count": 0,
+    "missing_percent": 0.0,
+    "unexpected_percent_total": 2.0,
+    "unexpected_percent_nonmissing": 2.0
+  },
+  "success": false,
+  "expectation_config": {
+    "kwargs": {
+      "column": "phone_brewery",
+      "value": 10,
+      "batch_id": "spark_memory-dq_test"
+    },
+    "expectation_type": "expect_column_value_lengths_to_equal",
+    "meta": {}
+  },
+  "exception_info": {
+    "raised_exception": false,
+    "exception_traceback": null,
+    "exception_message": null
+  },
+  "meta": {}
+}
 ------------------------------------------------------------
 Expectativa: expect_column_values_to_be_between | Coluna: latitude_brewery | Sucesso: True
 ------------------------------------------------------------
