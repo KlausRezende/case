@@ -56,9 +56,9 @@ df_silver = df_silver \
 
 df_silver = df_silver.withColumn("phone_brewery", when(col("phone_brewery").isNull(), "0000000000").otherwise(col("phone_brewery")))
 
-df_silver = df_silver.withColumn("address_1", when(col("address_1").isNull(), "N/A").otherwise(col("address_1")))
-df_silver = df_silver.withColumn("address_2", when(col("address_2").isNull(), "N/A").otherwise(col("address_2")))
-df_silver = df_silver.withColumn("address_3", when(col("address_3").isNull(), "N/A").otherwise(col("address_3")))
+df_silver = df_silver.withColumn("address_1_brewery", when(col("address_1_brewery").isNull(), "N/A").otherwise(col("address_1_brewery")))
+df_silver = df_silver.withColumn("address_2_brewery", when(col("address_2_brewery").isNull(), "N/A").otherwise(col("address_2_brewery")))
+df_silver = df_silver.withColumn("address_3_brewery", when(col("address_3_brewery").isNull(), "N/A").otherwise(col("address_3_brewery")))
 
 
 #Add column for CDC control

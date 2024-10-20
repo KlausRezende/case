@@ -1,108 +1,41 @@
 Expectativa: expect_column_values_to_not_be_null | Coluna: id_brewery | Sucesso: True
 ------------------------------------------------------------
-Expectativa: expect_column_values_to_be_unique | Coluna: id_brewery | Sucesso: False
-Detalhes da falha: {
-  "result": {
-    "element_count": 100,
-    "unexpected_count": 100,
-    "unexpected_percent": 100.0,
-    "partial_unexpected_list": [
-      "03118499-a3d0-4c22-860d-4529509ae095",
-      "03118499-a3d0-4c22-860d-4529509ae095",
-      "06e9fffb-e820-45c9-b107-b52b51013e8f",
-      "06e9fffb-e820-45c9-b107-b52b51013e8f",
-      "08f78223-24f8-4b71-b381-ea19a5bd82df",
-      "08f78223-24f8-4b71-b381-ea19a5bd82df",
-      "0faa0fb2-fffa-416d-9eab-46f67477c8ef",
-      "0faa0fb2-fffa-416d-9eab-46f67477c8ef",
-      "1988eb86-f0a2-4674-ba04-02454efa0d31",
-      "1988eb86-f0a2-4674-ba04-02454efa0d31",
-      "1a1b2165-73ed-40aa-b89b-56794d140f22",
-      "1a1b2165-73ed-40aa-b89b-56794d140f22",
-      "1ecc330f-6275-42a5-b14e-00adbed62752",
-      "1ecc330f-6275-42a5-b14e-00adbed62752",
-      "232e8f62-9afc-45f5-b4bc-582c26b5c43b",
-      "232e8f62-9afc-45f5-b4bc-582c26b5c43b",
-      "284b44f8-6ccb-4cd6-8d06-f2ad882a47c3",
-      "284b44f8-6ccb-4cd6-8d06-f2ad882a47c3",
-      "34e8c68b-6146-453f-a4b9-1f6cd99a5ada",
-      "34e8c68b-6146-453f-a4b9-1f6cd99a5ada"
-    ],
-    "missing_count": 0,
-    "missing_percent": 0.0,
-    "unexpected_percent_total": 100.0,
-    "unexpected_percent_nonmissing": 100.0
-  },
-  "success": false,
-  "expectation_config": {
-    "kwargs": {
-      "column": "id_brewery",
-      "batch_id": "spark_memory-df_asset"
-    },
-    "expectation_type": "expect_column_values_to_be_unique",
-    "meta": {}
-  },
-  "meta": {},
-  "exception_info": {
-    "raised_exception": false,
-    "exception_traceback": null,
-    "exception_message": null
-  }
-}
+Expectativa: expect_column_values_to_be_unique | Coluna: id_brewery | Sucesso: True
 ------------------------------------------------------------
 Expectativa: expect_column_value_lengths_to_equal | Coluna: phone_brewery | Sucesso: False
 Detalhes da falha: {
   "result": {
-    "element_count": 100,
-    "unexpected_count": 90,
-    "unexpected_percent": 90.0,
+    "element_count": 50,
+    "unexpected_count": 1,
+    "unexpected_percent": 2.0,
     "partial_unexpected_list": [
-      "5415851007",
-      "5415851007",
-      "5032241700",
-      "5415851007",
-      "5415751188",
-      "5032393831",
-      "6195782311",
-      "7077534934",
-      "8186996165",
-      "7205738992",
-      "3033257321",
-      "3035791004",
-      "7207731437",
-      "5415851007",
-      "5415851007",
-      "5032241700",
-      "5415851007",
-      "5415751188",
-      "5032393831",
-      "6023395014"
+      "353599107299"
     ],
     "missing_count": 0,
     "missing_percent": 0.0,
-    "unexpected_percent_total": 90.0,
-    "unexpected_percent_nonmissing": 90.0
+    "unexpected_percent_total": 2.0,
+    "unexpected_percent_nonmissing": 2.0
   },
   "success": false,
   "expectation_config": {
     "kwargs": {
       "column": "phone_brewery",
-      "value": 11,
-      "batch_id": "spark_memory-df_asset"
+      "value": 10,
+      "batch_id": "spark_memory-dq_test"
     },
     "expectation_type": "expect_column_value_lengths_to_equal",
     "meta": {}
   },
-  "meta": {},
   "exception_info": {
     "raised_exception": false,
     "exception_traceback": null,
     "exception_message": null
-  }
+  },
+  "meta": {}
 }
 ------------------------------------------------------------
 Expectativa: expect_column_values_to_be_between | Coluna: latitude_brewery | Sucesso: True
 ------------------------------------------------------------
 Expectativa: expect_column_value_lengths_to_be_between | Coluna: postal_code_brewery | Sucesso: True
 ------------------------------------------------------------
-Percentual de validações bem-sucedidas: 60.00%
+Percentual de validações bem-sucedidas: 80.00%
