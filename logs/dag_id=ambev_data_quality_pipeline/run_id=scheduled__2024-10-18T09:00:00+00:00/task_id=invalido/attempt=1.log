@@ -1,0 +1,34 @@
+[2024-10-20T00:53:36.301+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_data_quality_pipeline.invalido scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-20T00:53:36.357+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_data_quality_pipeline.invalido scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-20T00:53:36.359+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-20T00:53:36.361+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-10-20T00:53:36.364+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-20T00:53:36.435+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): invalido> on 2024-10-18 09:00:00+00:00
+[2024-10-20T00:53:36.447+0000] {standard_task_runner.py:55} INFO - Started process 1680 to run task
+[2024-10-20T00:53:36.458+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ambev_data_quality_pipeline', 'invalido', 'scheduled__2024-10-18T09:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dag_dataquality.py', '--cfg-path', '/tmp/tmpvlnnkr4s']
+[2024-10-20T00:53:36.466+0000] {standard_task_runner.py:83} INFO - Job 11: Subtask invalido
+[2024-10-20T00:53:36.595+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-20T00:53:36.735+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-20T00:53:36.928+0000] {task_command.py:388} INFO - Running <TaskInstance: ambev_data_quality_pipeline.invalido scheduled__2024-10-18T09:00:00+00:00 [running]> on host 96311538d4eb
+[2024-10-20T00:53:37.228+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Klaus_Rezende
+AIRFLOW_CTX_DAG_ID=ambev_data_quality_pipeline
+AIRFLOW_CTX_TASK_ID=invalido
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-18T09:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-18T09:00:00+00:00
+[2024-10-20T00:53:37.230+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.9/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_dataquality.py", line 38, in error
+    raise Exception("Arquivo com erro...")
+Exception: Arquivo com erro...
+[2024-10-20T00:53:37.434+0000] {taskinstance.py:1318} INFO - Marking task as FAILED. dag_id=ambev_data_quality_pipeline, task_id=invalido, execution_date=20241018T090000, start_date=20241020T005336, end_date=20241020T005337
+[2024-10-20T00:53:37.675+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 11 for task invalido (Arquivo com erro...; 1680)
+[2024-10-20T00:53:37.694+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-10-20T00:53:37.803+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
