@@ -1,0 +1,48 @@
+[2024-10-19T14:24:33.394+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_breweries_pipeline.run_silver manual__2024-10-19T14:24:30.114463+00:00 [queued]>
+[2024-10-19T14:24:33.401+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_breweries_pipeline.run_silver manual__2024-10-19T14:24:30.114463+00:00 [queued]>
+[2024-10-19T14:24:33.401+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-19T14:24:33.401+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-10-19T14:24:33.402+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-19T14:24:33.410+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): run_silver> on 2024-10-19 14:24:30.114463+00:00
+[2024-10-19T14:24:33.413+0000] {standard_task_runner.py:55} INFO - Started process 434 to run task
+[2024-10-19T14:24:33.415+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ambev_breweries_pipeline', 'run_silver', 'manual__2024-10-19T14:24:30.114463+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/dag_brewery.py', '--cfg-path', '/tmp/tmpmwc__r4n']
+[2024-10-19T14:24:33.416+0000] {standard_task_runner.py:83} INFO - Job 27: Subtask run_silver
+[2024-10-19T14:24:33.425+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-19T14:24:33.458+0000] {task_command.py:388} INFO - Running <TaskInstance: ambev_breweries_pipeline.run_silver manual__2024-10-19T14:24:30.114463+00:00 [running]> on host 39b0b1bd9d5a
+[2024-10-19T14:24:33.502+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Klaus_Rezende
+AIRFLOW_CTX_DAG_ID=ambev_breweries_pipeline
+AIRFLOW_CTX_TASK_ID=run_silver
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-19T14:24:30.114463+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-19T14:24:30.114463+00:00
+[2024-10-19T14:24:33.503+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-19T14:24:33.503+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/silver_brewery.py']
+[2024-10-19T14:24:33.509+0000] {subprocess.py:86} INFO - Output:
+[2024-10-19T14:24:35.032+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2024-10-19T14:24:35.033+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2024-10-19T14:24:35.163+0000] {subprocess.py:93} INFO - 24/10/19 14:24:35 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-10-19T14:24:38.313+0000] {subprocess.py:93} INFO - Dataframe has data, processing...
+[2024-10-19T14:24:38.313+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-10-19T14:24:38.314+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/silver_brewery.py", line 72, in <module>
+[2024-10-19T14:24:38.315+0000] {subprocess.py:93} INFO -     df_silver.write \
+[2024-10-19T14:24:38.315+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/pyspark/sql/readwriter.py", line 1463, in save
+[2024-10-19T14:24:38.315+0000] {subprocess.py:93} INFO -     self._jwrite.save(path)
+[2024-10-19T14:24:38.316+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/py4j/java_gateway.py", line 1322, in __call__
+[2024-10-19T14:24:38.316+0000] {subprocess.py:93} INFO -     return_value = get_return_value(
+[2024-10-19T14:24:38.316+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/pyspark/errors/exceptions/captured.py", line 185, in deco
+[2024-10-19T14:24:38.316+0000] {subprocess.py:93} INFO -     raise converted from None
+[2024-10-19T14:24:38.319+0000] {subprocess.py:93} INFO - pyspark.errors.exceptions.captured.AnalysisException: Partition column `name_state` not found in schema struct<id_brewery:string,name_brewery:string,type_brewery:string,phone_brewery:string,country_brewery:string,state_brewery:string,state_province_brewery:string,city_brewery:string,postal_code_brewery:string,latitude_brewery:string,longitude_brewery:string,address_1_brewery:string,address_2_brewery:string,address_3_brewery:string,updated_at:string>.
+[2024-10-19T14:24:38.740+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-10-19T14:24:38.749+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/airflow/operators/bash.py", line 196, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-10-19T14:24:38.751+0000] {taskinstance.py:1318} INFO - Marking task as FAILED. dag_id=ambev_breweries_pipeline, task_id=run_silver, execution_date=20241019T142430, start_date=20241019T142433, end_date=20241019T142438
+[2024-10-19T14:24:38.760+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 27 for task run_silver (Bash command failed. The command returned a non-zero exit code 1.; 434)
+[2024-10-19T14:24:38.793+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-10-19T14:24:38.808+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

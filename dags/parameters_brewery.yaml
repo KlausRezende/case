@@ -1,0 +1,7 @@
+config:
+  dag_name: ambev_breweries_pipeline
+  schedule_interval: 0 9 * * * 
+  run_scripts:
+  - bronze: python3 /opt/airflow/scripts/bronze_brewery.py
+    silver: python3 /opt/airflow/scripts/silver_brewery.py
+    gold:   python3 /opt/airflow/scripts/gold_brewery.py

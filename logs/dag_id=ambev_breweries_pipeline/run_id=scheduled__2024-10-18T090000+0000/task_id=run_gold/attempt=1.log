@@ -1,0 +1,66 @@
+[2024-10-20T00:51:36.222+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_breweries_pipeline.run_gold scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-20T00:51:36.237+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_breweries_pipeline.run_gold scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-20T00:51:36.238+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-20T00:51:36.238+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-10-20T00:51:36.239+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-20T00:51:36.261+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): run_gold> on 2024-10-18 09:00:00+00:00
+[2024-10-20T00:51:36.266+0000] {standard_task_runner.py:55} INFO - Started process 584 to run task
+[2024-10-20T00:51:36.269+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ambev_breweries_pipeline', 'run_gold', 'scheduled__2024-10-18T09:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dag_brewery.py', '--cfg-path', '/tmp/tmpqvse74q2']
+[2024-10-20T00:51:36.272+0000] {standard_task_runner.py:83} INFO - Job 4: Subtask run_gold
+[2024-10-20T00:51:36.301+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-20T00:51:36.341+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-20T00:51:36.390+0000] {task_command.py:388} INFO - Running <TaskInstance: ambev_breweries_pipeline.run_gold scheduled__2024-10-18T09:00:00+00:00 [running]> on host 96311538d4eb
+[2024-10-20T00:51:36.500+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Klaus_Rezende
+AIRFLOW_CTX_DAG_ID=ambev_breweries_pipeline
+AIRFLOW_CTX_TASK_ID=run_gold
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-18T09:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-18T09:00:00+00:00
+[2024-10-20T00:51:36.502+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-20T00:51:36.505+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/gold_brewery.py']
+[2024-10-20T00:51:36.513+0000] {subprocess.py:86} INFO - Output:
+[2024-10-20T00:51:39.625+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2024-10-20T00:51:39.626+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2024-10-20T00:51:39.948+0000] {subprocess.py:93} INFO - 24/10/20 00:51:39 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-10-20T00:52:01.692+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                          (0 + 8) / 8][Stage 1:=======>                                                   (1 + 7) / 8][Stage 6:>                                                          (0 + 1) / 1]
+[2024-10-20T00:52:01.693+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-10-20T00:52:01.741+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=ambev_breweries_pipeline, task_id=run_gold, execution_date=20241018T090000, start_date=20241020T005136, end_date=20241020T005201
+[2024-10-20T00:52:01.774+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-10-20T00:52:01.815+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-20T02:54:56.270+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_breweries_pipeline.run_gold scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-20T02:54:56.284+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_breweries_pipeline.run_gold scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-20T02:54:56.284+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-20T02:54:56.285+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-10-20T02:54:56.285+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-20T02:54:56.302+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): run_gold> on 2024-10-18 09:00:00+00:00
+[2024-10-20T02:54:56.306+0000] {standard_task_runner.py:55} INFO - Started process 7055 to run task
+[2024-10-20T02:54:56.309+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ambev_breweries_pipeline', 'run_gold', 'scheduled__2024-10-18T09:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/dag_brewery.py', '--cfg-path', '/tmp/tmp_guarazq']
+[2024-10-20T02:54:56.311+0000] {standard_task_runner.py:83} INFO - Job 4: Subtask run_gold
+[2024-10-20T02:54:56.332+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-20T02:54:56.358+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-20T02:54:56.397+0000] {task_command.py:388} INFO - Running <TaskInstance: ambev_breweries_pipeline.run_gold scheduled__2024-10-18T09:00:00+00:00 [running]> on host 939493bb965b
+[2024-10-20T02:54:56.487+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Klaus_Rezende
+AIRFLOW_CTX_DAG_ID=ambev_breweries_pipeline
+AIRFLOW_CTX_TASK_ID=run_gold
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-18T09:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-18T09:00:00+00:00
+[2024-10-20T02:54:56.489+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-20T02:54:56.490+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/gold_brewery.py']
+[2024-10-20T02:54:56.498+0000] {subprocess.py:86} INFO - Output:
+[2024-10-20T02:54:59.049+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2024-10-20T02:54:59.050+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2024-10-20T02:54:59.302+0000] {subprocess.py:93} INFO - 24/10/20 02:54:59 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-10-20T02:55:15.846+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                          (0 + 8) / 8][Stage 1:=======>                                                   (1 + 7) / 8][Stage 1:==============>                                            (2 + 6) / 8]
+[2024-10-20T02:55:15.846+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-10-20T02:55:15.890+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=ambev_breweries_pipeline, task_id=run_gold, execution_date=20241018T090000, start_date=20241020T025456, end_date=20241020T025515
+[2024-10-20T02:55:15.918+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-10-20T02:55:15.958+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

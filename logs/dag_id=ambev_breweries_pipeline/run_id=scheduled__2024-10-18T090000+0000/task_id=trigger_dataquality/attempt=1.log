@@ -1,0 +1,48 @@
+[2024-10-20T00:52:03.297+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_breweries_pipeline.trigger_dataquality scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-20T00:52:03.309+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_breweries_pipeline.trigger_dataquality scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-20T00:52:03.309+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-20T00:52:03.310+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-10-20T00:52:03.311+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-20T00:52:03.362+0000] {taskinstance.py:1300} INFO - Executing <Task(TriggerDagRunOperator): trigger_dataquality> on 2024-10-18 09:00:00+00:00
+[2024-10-20T00:52:03.367+0000] {standard_task_runner.py:55} INFO - Started process 790 to run task
+[2024-10-20T00:52:03.370+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ambev_breweries_pipeline', 'trigger_dataquality', 'scheduled__2024-10-18T09:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag_brewery.py', '--cfg-path', '/tmp/tmp28j0ye62']
+[2024-10-20T00:52:03.373+0000] {standard_task_runner.py:83} INFO - Job 5: Subtask trigger_dataquality
+[2024-10-20T00:52:03.398+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-20T00:52:03.427+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-20T00:52:03.472+0000] {task_command.py:388} INFO - Running <TaskInstance: ambev_breweries_pipeline.trigger_dataquality scheduled__2024-10-18T09:00:00+00:00 [running]> on host 96311538d4eb
+[2024-10-20T00:52:03.569+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Klaus_Rezende
+AIRFLOW_CTX_DAG_ID=ambev_breweries_pipeline
+AIRFLOW_CTX_TASK_ID=trigger_dataquality
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-18T09:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-18T09:00:00+00:00
+[2024-10-20T00:52:03.695+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=ambev_breweries_pipeline, task_id=trigger_dataquality, execution_date=20241018T090000, start_date=20241020T005203, end_date=20241020T005203
+[2024-10-20T00:52:03.746+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-10-20T00:52:03.785+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-20T02:55:17.336+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_breweries_pipeline.trigger_dataquality scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-20T02:55:17.349+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_breweries_pipeline.trigger_dataquality scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-20T02:55:17.349+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-20T02:55:17.350+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-10-20T02:55:17.350+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-20T02:55:17.369+0000] {taskinstance.py:1300} INFO - Executing <Task(TriggerDagRunOperator): trigger_dataquality> on 2024-10-18 09:00:00+00:00
+[2024-10-20T02:55:17.373+0000] {standard_task_runner.py:55} INFO - Started process 7483 to run task
+[2024-10-20T02:55:17.376+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ambev_breweries_pipeline', 'trigger_dataquality', 'scheduled__2024-10-18T09:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/dag_brewery.py', '--cfg-path', '/tmp/tmpj0541lp6']
+[2024-10-20T02:55:17.378+0000] {standard_task_runner.py:83} INFO - Job 5: Subtask trigger_dataquality
+[2024-10-20T02:55:17.405+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-20T02:55:17.429+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-20T02:55:17.468+0000] {task_command.py:388} INFO - Running <TaskInstance: ambev_breweries_pipeline.trigger_dataquality scheduled__2024-10-18T09:00:00+00:00 [running]> on host 939493bb965b
+[2024-10-20T02:55:17.588+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Klaus_Rezende
+AIRFLOW_CTX_DAG_ID=ambev_breweries_pipeline
+AIRFLOW_CTX_TASK_ID=trigger_dataquality
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-18T09:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-18T09:00:00+00:00
+[2024-10-20T02:55:17.739+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=ambev_breweries_pipeline, task_id=trigger_dataquality, execution_date=20241018T090000, start_date=20241020T025517, end_date=20241020T025517
+[2024-10-20T02:55:17.791+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-10-20T02:55:17.825+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
