@@ -21,7 +21,7 @@ default_args = {
 }
 
 def validate_percentage():
-    with open('/opt/airflow/notebooks/validation_results.txt', 'r') as file:
+    with open('/opt/airflow/scripts/validation_results.txt', 'r') as file:
         lines = file.readlines()  
         last_line = lines[-1].strip() 
 

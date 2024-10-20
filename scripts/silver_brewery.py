@@ -9,7 +9,7 @@ spark = SparkSession \
     .appName("klaus_sessions") \
     .getOrCreate()
 
-df_silver = spark.read.json("/opt/airflow/bronze",multiLine=True)
+df_silver = spark.read.json("/opt/airflow/bronze_layer",multiLine=True)
 
 record_count = df_silver.count()
 
@@ -74,4 +74,4 @@ df_silver.write \
 .mode("append") \
 .partitionBy("state_brewery") \
 .option("mergeSchema", "true") \
-.save(f'/opt/airflow/silver/')
+.save(f'/opt/airflow/silver_layer/')

@@ -9,7 +9,7 @@ spark = SparkSession \
     .appName("klaus_session") \
     .getOrCreate()
 
-df = spark.read.parquet("/opt/airflow/silver/")
+df = spark.read.parquet("/opt/airflow/silver_layer/")
 
 df = df.withColumn('index',row_number().over(Window.partitionBy(col("id_brewery")).orderBy(col("updated_at").desc())))
 df = df.filter(df.index == 1) 
@@ -24,4 +24,4 @@ df_gold.write \
 .format("parquet") \
 .mode("append") \
 .option("mergeSchema", "true") \
-.save('/opt/airflow/gold/')
+.save('/opt/airflow/gold_layer/')

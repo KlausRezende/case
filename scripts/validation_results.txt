@@ -1,0 +1,12 @@
+Expectativa: expect_column_values_to_not_be_null | Coluna: id_brewery | Sucesso: True
+------------------------------------------------------------
+Expectativa: expect_column_values_to_be_unique | Coluna: id_brewery | Sucesso: True
+------------------------------------------------------------
+Expectativa: expect_column_value_lengths_to_equal | Coluna: phone_brewery | Sucesso: False
+Detalhes da falha: {'element_count': 50, 'unexpected_count': 6, 'unexpected_percent': 12.0, 'partial_unexpected_list': ['00000000000', '00000000000', '00000000000', '00000000000', '353599107299', '00000000000'], 'missing_count': 0, 'missing_percent': 0.0, 'unexpected_percent_total': 12.0, 'unexpected_percent_nonmissing': 12.0}
+------------------------------------------------------------
+Expectativa: expect_column_values_to_be_between | Coluna: latitude_brewery | Sucesso: True
+------------------------------------------------------------
+Expectativa: expect_column_value_lengths_to_be_between | Coluna: postal_code_brewery | Sucesso: True
+------------------------------------------------------------
+Percentual de validações bem-sucedidas: 80.00%
