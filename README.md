@@ -55,6 +55,9 @@ Por fim caso a tabela não esteja nos conformes de Data Quality ela irá ***aler
 
 
 
+![image](https://github.com/user-attachments/assets/9bbfe253-7e49-4221-a242-7036b7173747)
+
+
 
 
 
