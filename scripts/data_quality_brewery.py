@@ -61,7 +61,7 @@ with open(output_file, 'w') as f:
         f.write(output)  
         
         if not success:
-            failure_details = f"Detalhes da falha: {result['result']}\n"
+            failure_details = f"Detalhes da falha: {result}\n"
             f.write(failure_details)
         
         f.write('-' * 60 + '\n')

@@ -11,9 +11,9 @@ spark = SparkSession \
 
 df = spark.read.parquet("/opt/airflow/silver_layer/")
 
-df = df.withColumn('index',row_number().over(Window.partitionBy(col("id_brewery")).orderBy(col("updated_at").desc())))
-df = df.filter(df.index == 1) 
-df = df.drop("index")
+df = df.withColumn('row',row_number().over(Window.partitionBy(col("id_brewery")).orderBy(col("updated_at").desc())))
+df = df.filter(df.row == 1) 
+df = df.drop("row")
 
 df_gold = df.groupBy(df.state_brewery, df.type_brewery).count()
 

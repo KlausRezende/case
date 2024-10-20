@@ -54,15 +54,11 @@ df_silver = df_silver \
     .withColumnRenamed("postal_code", "postal_code_brewery")
 
 
+df_silver = df_silver.withColumn("phone_brewery", when(col("phone_brewery").isNull(), "0000000000").otherwise(col("phone_brewery")))
 
-# if df.filter(col("name_state").isNull() | col("brewery_type").isNull()).count() > 0:
-#     message = "The silver_brewery table has null values, informing the data engineering team..."
-#     notification_discord(message)
-#     print("Has null values")
-#     sys.exit()
-# else:
-#     print("Has no null values")
-df_silver = df_silver.withColumn("phone_brewery", when(col("phone_brewery").isNull(), "00000000000").otherwise(col("phone_brewery")))
+df_silver = df_silver.withColumn("address_1", when(col("address_1").isNull(), "N/A").otherwise(col("address_1")))
+df_silver = df_silver.withColumn("address_2", when(col("address_2").isNull(), "N/A").otherwise(col("address_2")))
+df_silver = df_silver.withColumn("address_3", when(col("address_3").isNull(), "N/A").otherwise(col("address_3")))
 
 
 #Add column for CDC control

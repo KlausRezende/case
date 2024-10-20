@@ -1,0 +1,7 @@
+[2024-10-20T18:28:34.819+0000] {processor.py:153} INFO - Started process (PID=1896) to work on /opt/airflow/dags/dag_dataquality.py
+[2024-10-20T18:28:34.820+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_dataquality.py for tasks to queue
+[2024-10-20T18:28:34.822+0000] {logging_mixin.py:137} INFO - [2024-10-20T18:28:34.822+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_dataquality.py
+[2024-10-20T18:28:34.894+0000] {processor.py:753} INFO - DAG(s) dict_keys(['ambev_data_quality_pipeline']) retrieved from /opt/airflow/dags/dag_dataquality.py
+[2024-10-20T18:28:34.954+0000] {logging_mixin.py:137} INFO - [2024-10-20T18:28:34.954+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-10-20T18:28:34.980+0000] {logging_mixin.py:137} INFO - [2024-10-20T18:28:34.980+0000] {dag.py:3437} INFO - Setting next_dagrun for ambev_data_quality_pipeline to 2024-10-20T09:00:00+00:00, run_after=2024-10-21T09:00:00+00:00
+[2024-10-20T18:28:35.204+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_dataquality.py took 0.388 seconds
