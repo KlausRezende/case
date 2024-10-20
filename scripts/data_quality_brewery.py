@@ -32,10 +32,6 @@ validator = context.get_validator(
     expectation_suite_name=expectation_name
 )
 
-columns_to_check_null = [
-    'id_brewery'
-]
-
 successful_validations = 0
 
 with open(output_file, 'w') as f:
