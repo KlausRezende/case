@@ -49,7 +49,7 @@ Foi desenvolvida 2 libs `(libs/logs.py)` para a monitoração de falhas da pipel
 ### Data Quality
  A DAG `ambev_data_quality_pipeline` realiza a validação da camada silver da tabela. A biblioteca utilizada para a realização das validações foi a ***great_expectations***.
 
-Após as 5 validações o resultado é salvo em um arquivo de logs (/notebooks/validation_results.txt), informando o ***percentual final das validações***.
+Após as 5 validações o resultado é salvo em um arquivo de logs (/scripts/validation_results.txt), informando o ***percentual final das validações***.
 
 Nos arquivo de parametros (dags/parameters_data_quality.yaml) da mesma DAG é possível definir um valor minímo de aceitação do Data Quality da tabela:
 `data_quality_percentage: 60.00`
