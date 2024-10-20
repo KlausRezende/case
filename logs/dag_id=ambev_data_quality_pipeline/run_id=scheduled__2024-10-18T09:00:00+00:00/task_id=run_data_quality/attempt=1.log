@@ -1,0 +1,125 @@
+[2024-10-19T14:55:58.314+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_data_quality_pipeline.run_data_quality scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-19T14:55:58.321+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_data_quality_pipeline.run_data_quality scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-19T14:55:58.321+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-19T14:55:58.321+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-10-19T14:55:58.322+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-19T14:55:58.330+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): run_data_quality> on 2024-10-18 09:00:00+00:00
+[2024-10-19T14:55:58.333+0000] {standard_task_runner.py:55} INFO - Started process 23007 to run task
+[2024-10-19T14:55:58.335+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ambev_data_quality_pipeline', 'run_data_quality', 'scheduled__2024-10-18T09:00:00+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/dag_dataquality.py', '--cfg-path', '/tmp/tmpxf6ezgg8']
+[2024-10-19T14:55:58.337+0000] {standard_task_runner.py:83} INFO - Job 39: Subtask run_data_quality
+[2024-10-19T14:55:58.348+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-19T14:55:58.363+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-19T14:55:58.383+0000] {task_command.py:388} INFO - Running <TaskInstance: ambev_data_quality_pipeline.run_data_quality scheduled__2024-10-18T09:00:00+00:00 [running]> on host 39b0b1bd9d5a
+[2024-10-19T14:55:58.428+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Klaus_Rezende
+AIRFLOW_CTX_DAG_ID=ambev_data_quality_pipeline
+AIRFLOW_CTX_TASK_ID=run_data_quality
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-18T09:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-18T09:00:00+00:00
+[2024-10-19T14:55:58.429+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-19T14:55:58.430+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/data_quality_brewery.py']
+[2024-10-19T14:55:58.436+0000] {subprocess.py:86} INFO - Output:
+[2024-10-19T14:56:02.647+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2024-10-19T14:56:02.647+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2024-10-19T14:56:02.775+0000] {subprocess.py:93} INFO - 24/10/19 14:56:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-10-19T14:56:08.549+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/8 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/8 [00:00<?, ?it/s]Calculating Metrics:  25%|██▌       | 2/8 [00:00<00:00, 96.16it/s]Calculating Metrics:  25%|██▌       | 2/8 [00:00<00:00, 87.45it/s][Stage 1:>                                                        (0 + 16) / 16][Stage 1:===>                                                     (1 + 15) / 16]                                                                                Calculating Metrics:  50%|█████     | 4/8 [00:01<00:01,  2.00it/s]Calculating Metrics:  50%|█████     | 4/8 [00:01<00:01,  2.00it/s]Calculating Metrics:  50%|█████     | 4/8 [00:01<00:01,  2.00it/s]Traceback (most recent call last):
+[2024-10-19T14:56:08.549+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/execution_engine/execution_engine.py", line 548, in _process_direct_and_bundled_metric_computation_configurations
+[2024-10-19T14:56:08.550+0000] {subprocess.py:93} INFO -     ] = metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable
+[2024-10-19T14:56:08.550+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/expectations/metrics/metric_provider.py", line 100, in inner_func
+[2024-10-19T14:56:08.550+0000] {subprocess.py:93} INFO -     return metric_fn(*args, **kwargs)
+[2024-10-19T14:56:08.550+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/expectations/metrics/map_metric_provider/column_condition_partial.py", line 256, in inner_func
+[2024-10-19T14:56:08.551+0000] {subprocess.py:93} INFO -     metric_domain_kwargs = get_dbms_compatible_metric_domain_kwargs(
+[2024-10-19T14:56:08.551+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/expectations/metrics/util.py", line 703, in get_dbms_compatible_metric_domain_kwargs
+[2024-10-19T14:56:08.551+0000] {subprocess.py:93} INFO -     column_name: str | sqlalchemy.quoted_name = get_dbms_compatible_column_names(
+[2024-10-19T14:56:08.551+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/expectations/metrics/util.py", line 777, in get_dbms_compatible_column_names
+[2024-10-19T14:56:08.551+0000] {subprocess.py:93} INFO -     _verify_column_names_exist_and_get_normalized_typed_column_names_map(
+[2024-10-19T14:56:08.551+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/expectations/metrics/util.py", line 873, in _verify_column_names_exist_and_get_normalized_typed_column_names_map
+[2024-10-19T14:56:08.552+0000] {subprocess.py:93} INFO -     raise gx_exceptions.InvalidMetricAccessorDomainKwargsKeyError(
+[2024-10-19T14:56:08.552+0000] {subprocess.py:93} INFO - great_expectations.exceptions.exceptions.InvalidMetricAccessorDomainKwargsKeyError: Error: The column "brewery_id" in BatchData does not exist.
+[2024-10-19T14:56:08.552+0000] {subprocess.py:93} INFO - 
+[2024-10-19T14:56:08.552+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2024-10-19T14:56:08.552+0000] {subprocess.py:93} INFO - 
+[2024-10-19T14:56:08.552+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-10-19T14:56:08.553+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/data_quality_brewery.py", line 68, in <module>
+[2024-10-19T14:56:08.553+0000] {subprocess.py:93} INFO -     validator = add_expectations(validator)
+[2024-10-19T14:56:08.553+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/data_quality_brewery.py", line 46, in add_expectations
+[2024-10-19T14:56:08.553+0000] {subprocess.py:93} INFO -     validator.expect_column_values_to_not_be_null(column=column)
+[2024-10-19T14:56:08.554+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/validator/validator.py", line 590, in inst_expectation
+[2024-10-19T14:56:08.554+0000] {subprocess.py:93} INFO -     raise err
+[2024-10-19T14:56:08.554+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/validator/validator.py", line 553, in inst_expectation
+[2024-10-19T14:56:08.554+0000] {subprocess.py:93} INFO -     validation_result = expectation.validate(
+[2024-10-19T14:56:08.554+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/expectations/expectation.py", line 1314, in validate
+[2024-10-19T14:56:08.554+0000] {subprocess.py:93} INFO -     ] = validator.graph_validate(
+[2024-10-19T14:56:08.555+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/validator/validator.py", line 1065, in graph_validate
+[2024-10-19T14:56:08.555+0000] {subprocess.py:93} INFO -     raise err
+[2024-10-19T14:56:08.555+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/validator/validator.py", line 1044, in graph_validate
+[2024-10-19T14:56:08.555+0000] {subprocess.py:93} INFO -     ) = self._resolve_suite_level_graph_and_process_metric_evaluation_errors(
+[2024-10-19T14:56:08.555+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/validator/validator.py", line 1200, in _resolve_suite_level_graph_and_process_metric_evaluation_errors
+[2024-10-19T14:56:08.555+0000] {subprocess.py:93} INFO -     ) = self._metrics_calculator.resolve_validation_graph(
+[2024-10-19T14:56:08.556+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/validator/metrics_calculator.py", line 274, in resolve_validation_graph
+[2024-10-19T14:56:08.556+0000] {subprocess.py:93} INFO -     resolved_metrics, aborted_metrics_info = graph.resolve(
+[2024-10-19T14:56:08.556+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/validator/validation_graph.py", line 202, in resolve
+[2024-10-19T14:56:08.556+0000] {subprocess.py:93} INFO -     aborted_metrics_info: _AbortedMetricsInfoDict = self._resolve(
+[2024-10-19T14:56:08.556+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/validator/validation_graph.py", line 302, in _resolve
+[2024-10-19T14:56:08.556+0000] {subprocess.py:93} INFO -     raise err
+[2024-10-19T14:56:08.557+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/validator/validation_graph.py", line 269, in _resolve
+[2024-10-19T14:56:08.557+0000] {subprocess.py:93} INFO -     self._execution_engine.resolve_metrics(
+[2024-10-19T14:56:08.557+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/execution_engine/execution_engine.py", line 283, in resolve_metrics
+[2024-10-19T14:56:08.557+0000] {subprocess.py:93} INFO -     return self._process_direct_and_bundled_metric_computation_configurations(
+[2024-10-19T14:56:08.557+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/site-packages/great_expectations/execution_engine/execution_engine.py", line 552, in _process_direct_and_bundled_metric_computation_configurations
+[2024-10-19T14:56:08.557+0000] {subprocess.py:93} INFO -     raise gx_exceptions.MetricResolutionError(
+[2024-10-19T14:56:08.558+0000] {subprocess.py:93} INFO - great_expectations.exceptions.exceptions.MetricResolutionError: Error: The column "brewery_id" in BatchData does not exist.
+[2024-10-19T14:56:08.652+0000] {subprocess.py:93} INFO - Calculating Metrics:  50%|█████     | 4/8 [00:02<00:02,  1.90it/s]
+[2024-10-19T14:56:09.329+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-10-19T14:56:09.339+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/airflow/operators/bash.py", line 196, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-10-19T14:56:09.341+0000] {taskinstance.py:1318} INFO - Marking task as FAILED. dag_id=ambev_data_quality_pipeline, task_id=run_data_quality, execution_date=20241018T090000, start_date=20241019T145558, end_date=20241019T145609
+[2024-10-19T14:56:09.349+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 39 for task run_data_quality (Bash command failed. The command returned a non-zero exit code 1.; 23007)
+[2024-10-19T14:56:09.376+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-10-19T14:56:09.392+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-20T00:52:15.633+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_data_quality_pipeline.run_data_quality scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-20T00:52:15.684+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ambev_data_quality_pipeline.run_data_quality scheduled__2024-10-18T09:00:00+00:00 [queued]>
+[2024-10-20T00:52:15.687+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-20T00:52:15.689+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-10-20T00:52:15.691+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-20T00:52:15.744+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): run_data_quality> on 2024-10-18 09:00:00+00:00
+[2024-10-20T00:52:15.750+0000] {standard_task_runner.py:55} INFO - Started process 803 to run task
+[2024-10-20T00:52:15.755+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ambev_data_quality_pipeline', 'run_data_quality', 'scheduled__2024-10-18T09:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag_dataquality.py', '--cfg-path', '/tmp/tmppivi4nw2']
+[2024-10-20T00:52:15.759+0000] {standard_task_runner.py:83} INFO - Job 6: Subtask run_data_quality
+[2024-10-20T00:52:15.801+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-20T00:52:15.852+0000] {logging_mixin.py:137} WARNING - /usr/local/lib/python3.9/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-20T00:52:15.929+0000] {task_command.py:388} INFO - Running <TaskInstance: ambev_data_quality_pipeline.run_data_quality scheduled__2024-10-18T09:00:00+00:00 [running]> on host 96311538d4eb
+[2024-10-20T00:52:16.237+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Klaus_Rezende
+AIRFLOW_CTX_DAG_ID=ambev_data_quality_pipeline
+AIRFLOW_CTX_TASK_ID=run_data_quality
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-18T09:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-18T09:00:00+00:00
+[2024-10-20T00:52:16.241+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-20T00:52:16.245+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/data_quality_brewery.py']
+[2024-10-20T00:52:16.265+0000] {subprocess.py:86} INFO - Output:
+[2024-10-20T00:52:31.850+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2024-10-20T00:52:31.853+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2024-10-20T00:52:32.559+0000] {subprocess.py:93} INFO - 24/10/20 00:52:32 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-10-20T00:52:35.245+0000] {subprocess.py:93} INFO - 24/10/20 00:52:35 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2024-10-20T00:53:12.461+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1]                                                                                Calculating Metrics:   0%|          | 0/8 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/8 [00:00<?, ?it/s]Calculating Metrics:  25%|██▌       | 2/8 [00:00<00:00, 20.17it/s]Calculating Metrics:  25%|██▌       | 2/8 [00:00<00:00, 17.76it/s]Calculating Metrics:  25%|██▌       | 2/8 [00:00<00:00, 17.76it/s][Stage 1:>                                                          (0 + 8) / 8][Stage 1:=======>                                                   (1 + 7) / 8][Stage 1:====================================>                      (5 + 3) / 8][Stage 1:============================================>              (6 + 2) / 8][Stage 2:>                                                          (0 + 8) / 8][Stage 2:====================================>                      (5 + 3) / 8]                                                                                Calculating Metrics:  50%|█████     | 4/8 [00:17<00:19,  4.99s/it]Calculating Metrics:  50%|█████     | 4/8 [00:17<00:19,  4.99s/it]Calculating Metrics:  50%|█████     | 4/8 [00:17<00:19,  4.99s/it]Calculating Metrics:  62%|██████▎   | 5/8 [00:17<00:14,  4.99s/it]Calculating Metrics:  62%|██████▎   | 5/8 [00:17<00:14,  4.99s/it]Calculating Metrics:  88%|████████▊ | 7/8 [00:19<00:02,  2.66s/it]Calculating Metrics:  88%|████████▊ | 7/8 [00:19<00:02,  2.66s/it]Calculating Metrics:  88%|████████▊ | 7/8 [00:19<00:02,  2.66s/it]Calculating Metrics: 100%|██████████| 8/8 [00:20<00:00,  2.30s/it]Calculating Metrics: 100%|██████████| 8/8 [00:20<00:00,  2.30s/it]Calculating Metrics: 100%|██████████| 8/8 [00:20<00:00,  2.30s/it]Calculating Metrics: 100%|██████████| 8/8 [00:20<00:00,  2.30s/it]Calculating Metrics: 100%|██████████| 8/8 [00:20<00:00,  2.55s/it]
+[2024-10-20T00:53:15.005+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/12 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/12 [00:00<?, ?it/s]Calculating Metrics:  17%|█▋        | 2/12 [00:00<00:00, 181.39it/s]Calculating Metrics:  17%|█▋        | 2/12 [00:00<00:00, 75.62it/s] Calculating Metrics:  33%|███▎      | 4/12 [00:00<00:00,  8.32it/s]Calculating Metrics:  33%|███▎      | 4/12 [00:00<00:00,  8.32it/s]Calculating Metrics:  33%|███▎      | 4/12 [00:00<00:00,  8.32it/s]Calculating Metrics:  50%|█████     | 6/12 [00:00<00:00,  8.87it/s]Calculating Metrics:  50%|█████     | 6/12 [00:00<00:00,  8.87it/s]Calculating Metrics:  50%|█████     | 6/12 [00:00<00:00,  8.87it/s]Calculating Metrics:  67%|██████▋   | 8/12 [00:00<00:00,  8.87it/s]Calculating Metrics:  67%|██████▋   | 8/12 [00:00<00:00,  8.87it/s]Calculating Metrics:  92%|█████████▏| 11/12 [00:01<00:00,  5.56it/s]Calculating Metrics:  92%|█████████▏| 11/12 [00:01<00:00,  5.56it/s]Calculating Metrics:  92%|█████████▏| 11/12 [00:01<00:00,  5.56it/s]Calculating Metrics: 100%|██████████| 12/12 [00:02<00:00,  4.12it/s]Calculating Metrics: 100%|██████████| 12/12 [00:02<00:00,  4.12it/s]Calculating Metrics: 100%|██████████| 12/12 [00:02<00:00,  4.12it/s]Calculating Metrics: 100%|██████████| 12/12 [00:02<00:00,  4.12it/s]Calculating Metrics: 100%|██████████| 12/12 [00:02<00:00,  4.94it/s]
+[2024-10-20T00:53:17.030+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/11 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/11 [00:00<?, ?it/s]Calculating Metrics:  18%|█▊        | 2/11 [00:00<00:00, 240.12it/s]Calculating Metrics:  18%|█▊        | 2/11 [00:00<00:00, 37.01it/s] Calculating Metrics:  36%|███▋      | 4/11 [00:00<00:00,  7.95it/s]Calculating Metrics:  36%|███▋      | 4/11 [00:00<00:00,  7.95it/s]Calculating Metrics:  36%|███▋      | 4/11 [00:00<00:00,  7.95it/s]Calculating Metrics:  55%|█████▍    | 6/11 [00:00<00:00,  7.95it/s]Calculating Metrics:  55%|█████▍    | 6/11 [00:00<00:00,  7.95it/s]Calculating Metrics:  82%|████████▏ | 9/11 [00:01<00:00,  6.97it/s]Calculating Metrics:  82%|████████▏ | 9/11 [00:01<00:00,  6.97it/s]Calculating Metrics:  82%|████████▏ | 9/11 [00:01<00:00,  6.97it/s]Calculating Metrics: 100%|██████████| 11/11 [00:01<00:00,  5.29it/s]Calculating Metrics: 100%|██████████| 11/11 [00:01<00:00,  5.29it/s]Calculating Metrics: 100%|██████████| 11/11 [00:01<00:00,  5.29it/s]Calculating Metrics: 100%|██████████| 11/11 [00:01<00:00,  5.29it/s]Calculating Metrics: 100%|██████████| 11/11 [00:01<00:00,  5.77it/s]
+[2024-10-20T00:53:18.875+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/11 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/11 [00:00<?, ?it/s]Calculating Metrics:  18%|█▊        | 2/11 [00:00<00:00, 249.08it/s]Calculating Metrics:  18%|█▊        | 2/11 [00:00<00:00, 59.54it/s] Calculating Metrics:  36%|███▋      | 4/11 [00:00<00:00,  8.51it/s]Calculating Metrics:  36%|███▋      | 4/11 [00:00<00:00,  8.51it/s]Calculating Metrics:  36%|███▋      | 4/11 [00:00<00:00,  8.51it/s]Calculating Metrics:  55%|█████▍    | 6/11 [00:00<00:00,  8.51it/s]Calculating Metrics:  55%|█████▍    | 6/11 [00:00<00:00,  8.51it/s]Calculating Metrics:  82%|████████▏ | 9/11 [00:01<00:00,  8.10it/s]Calculating Metrics:  82%|████████▏ | 9/11 [00:01<00:00,  8.10it/s]Calculating Metrics:  82%|████████▏ | 9/11 [00:01<00:00,  8.10it/s]Calculating Metrics: 100%|██████████| 11/11 [00:01<00:00,  5.69it/s]Calculating Metrics: 100%|██████████| 11/11 [00:01<00:00,  5.69it/s]Calculating Metrics: 100%|██████████| 11/11 [00:01<00:00,  5.69it/s]Calculating Metrics: 100%|██████████| 11/11 [00:01<00:00,  5.69it/s]Calculating Metrics: 100%|██████████| 11/11 [00:01<00:00,  6.27it/s]
+[2024-10-20T00:53:21.140+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/12 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/12 [00:00<?, ?it/s]Calculating Metrics:  17%|█▋        | 2/12 [00:00<00:00, 76.22it/s]Calculating Metrics:  17%|█▋        | 2/12 [00:00<00:00, 16.13it/s]Calculating Metrics:  17%|█▋        | 2/12 [00:00<00:00, 16.13it/s]Calculating Metrics:  33%|███▎      | 4/12 [00:00<00:01,  5.85it/s]Calculating Metrics:  33%|███▎      | 4/12 [00:00<00:01,  5.85it/s]Calculating Metrics:  33%|███▎      | 4/12 [00:00<00:01,  5.85it/s]Calculating Metrics:  50%|█████     | 6/12 [00:00<00:01,  5.85it/s]Calculating Metrics:  50%|█████     | 6/12 [00:00<00:01,  5.85it/s]Calculating Metrics:  67%|██████▋   | 8/12 [00:00<00:00, 12.36it/s]Calculating Metrics:  67%|██████▋   | 8/12 [00:00<00:00, 12.36it/s]Calculating Metrics:  67%|██████▋   | 8/12 [00:00<00:00, 12.36it/s]Calculating Metrics:  92%|█████████▏| 11/12 [00:01<00:00,  5.85it/s]Calculating Metrics:  92%|█████████▏| 11/12 [00:01<00:00,  5.85it/s]Calculating Metrics:  92%|█████████▏| 11/12 [00:01<00:00,  5.85it/s]Calculating Metrics: 100%|██████████| 12/12 [00:02<00:00,  5.85it/s]Calculating Metrics: 100%|██████████| 12/12 [00:02<00:00,  5.85it/s]Calculating Metrics: 100%|██████████| 12/12 [00:02<00:00,  5.85it/s]Calculating Metrics: 100%|██████████| 12/12 [00:02<00:00,  5.86it/s]
+[2024-10-20T00:53:25.054+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/38 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/38 [00:00<?, ?it/s]Calculating Metrics:   5%|▌         | 2/38 [00:00<00:00, 208.59it/s]Calculating Metrics:   5%|▌         | 2/38 [00:00<00:01, 19.05it/s] Calculating Metrics:   5%|▌         | 2/38 [00:00<00:01, 19.05it/s]Calculating Metrics:  11%|█         | 4/38 [00:00<00:03,  9.61it/s]Calculating Metrics:  11%|█         | 4/38 [00:00<00:03,  9.61it/s]Calculating Metrics:  11%|█         | 4/38 [00:00<00:03,  9.61it/s]Calculating Metrics:  34%|███▍      | 13/38 [00:00<00:00, 26.70it/s]Calculating Metrics:  34%|███▍      | 13/38 [00:00<00:00, 26.70it/s]Calculating Metrics:  34%|███▍      | 13/38 [00:00<00:00, 26.70it/s]Calculating Metrics:  66%|██████▌   | 25/38 [00:01<00:01, 12.15it/s]Calculating Metrics:  66%|██████▌   | 25/38 [00:01<00:01, 12.15it/s]Calculating Metrics:  66%|██████▌   | 25/38 [00:01<00:01, 12.15it/s]Calculating Metrics:  95%|█████████▍| 36/38 [00:03<00:00, 10.65it/s]Calculating Metrics:  95%|█████████▍| 36/38 [00:03<00:00, 10.65it/s]Calculating Metrics:  95%|█████████▍| 36/38 [00:03<00:00, 10.65it/s]Calculating Metrics: 100%|██████████| 38/38 [00:03<00:00,  9.54it/s]Calculating Metrics: 100%|██████████| 38/38 [00:03<00:00,  9.54it/s]Calculating Metrics: 100%|██████████| 38/38 [00:03<00:00,  9.54it/s]Calculating Metrics: 100%|██████████| 38/38 [00:03<00:00,  9.54it/s]Calculating Metrics: 100%|██████████| 38/38 [00:03<00:00, 10.78it/s]
+[2024-10-20T00:53:27.778+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-10-20T00:53:27.885+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=ambev_data_quality_pipeline, task_id=run_data_quality, execution_date=20241018T090000, start_date=20241020T005215, end_date=20241020T005327
+[2024-10-20T00:53:27.969+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-10-20T00:53:28.057+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
