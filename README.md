@@ -10,14 +10,14 @@ Este projeto realiza o **ETL** (Extração, Transformação e Carga) de dados de
 
 ### Passos para execução da Pipeline:
 
-1. Acesse a pasta case_brewerys
+1. Acesse a pasta case
     ```
     cd case
     ```
 
 2. Suba os containers usando o comando:
     ```
-    docker-compose up
+    docker compose up
     ```
    Esse comando deve ser executado a partir do arquivo `docker-compose.yaml` contido na pasta `case`.
 
