@@ -31,8 +31,8 @@ Este projeto realiza o **ETL** (Extração, Transformação e Carga) de dados de
     - `ambev_breweries_pipeline`
     - `ambev_data_quality_pipeline`
 
-5. Triggar a DAG:
-    - `ambev_breweries_pipeline` Após a finalização ela irá acionar automaticamente a pipeline de DataQuality.
+5. Triggar a DAG: `ambev_breweries_pipeline`
+     Após a finalização ela irá acionar automaticamente a pipeline de DataQuality.
 
 
 ### Monitoração
