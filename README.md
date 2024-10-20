@@ -57,7 +57,22 @@ Finally, if the table does not meet the Data Quality standards, it will ***alert
 ![image](https://github.com/user-attachments/assets/5094cd7e-da3d-48a8-9c89-995c6c76e0b9)
 
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # PORTUGUÊS PT/BR
 
