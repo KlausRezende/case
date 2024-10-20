@@ -59,6 +59,7 @@ Finally, if the table does not meet the Data Quality standards, it will ***alert
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# PORTUGUÊS PT/BR
 
 # BEES Data Engineering – Breweries Case 
 
