@@ -30,9 +30,9 @@ def validate_percentage():
         percentage = float(percentage_str)
 
         if percentage > parameters['config']['data_quality_percentage']:
-            return 'valido'
+            return 'valid'
         else:
-            return 'invalido'
+            return 'invalid'
 
 def error():
     raise Exception("Arquivo com erro...")
@@ -62,14 +62,14 @@ with DAG(
         python_callable=validate_percentage
     )
 
-    valido = BashOperator(
-        task_id = "valido",
-        bash_command = "echo 'valido'"
+    valid = BashOperator(
+        task_id = "valid",
+        bash_command = "echo 'valid'"
     )
 
-    invalido = PythonOperator(
-        task_id = "invalido",
+    invalid = PythonOperator(
+        task_id = "invalid",
         python_callable = error
     )
 
-    start >> run_data_quality  >> validate_logs >> [valido, invalido] 
+    start >> run_data_quality  >> validate_logs >> [valid, invalid] 
