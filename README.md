@@ -9,8 +9,9 @@ This project performs the **ETL** (Extraction, Transformation, and Loading) of A
 
 ### Steps to Run the Pipeline:
 
-1. Access the case folder:
+1. Clone repo and access the case folder:
     ```
+    clone repo && git clone <"url">
     cd case
     ```
 2. Clean the folders:
