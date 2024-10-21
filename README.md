@@ -13,23 +13,28 @@ This project performs the **ETL** (Extraction, Transformation, and Loading) of A
     ```
     cd case
     ```
-
-2. Start the containers using the command:
+2. Clean the folders:
+    ```
+    rm -rf bronze_layer/*
+    rm -rf silver_layer/*
+    rm -rf gold_layer/*
+    ```
+3. Start the containers using the command:
     ```
     docker compose up
     ```
    This command should be executed from the `docker-compose.yaml` file located in the `case` folder.
 
-3. Access the Airflow interface:
+4. Access the Airflow interface:
     - URL: `localhost:8081`
     - Username: `admin`
     - Password: `admin`
 
-4. Turn on the 2 DAGs:
+5. Turn on the 2 DAGs:
     - `ambev_breweries_pipeline`
     - `ambev_data_quality_pipeline`
 
-5. Trigger the DAG: `ambev_breweries_pipeline`
+6. Trigger the DAG: `ambev_breweries_pipeline`
    Once it finishes, it will automatically trigger the Data Quality pipeline.
 
 ![image](https://github.com/user-attachments/assets/9bbfe253-7e49-4221-a242-7036b7173747)
