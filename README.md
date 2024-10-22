@@ -35,7 +35,7 @@ This project performs the **ETL** (Extraction, Transformation, and Loading) of A
     - `ambev_breweries_pipeline`
     - `ambev_data_quality_pipeline`
 
-6. Trigger the DAG: `ambev_breweries_pipeline`
+6. Automatically the DAG: `ambev_breweries_pipeline` will be triggered:
    Once it finishes, it will automatically trigger the Data Quality pipeline.
 
 ![image](https://github.com/user-attachments/assets/9bbfe253-7e49-4221-a242-7036b7173747)
