@@ -54,6 +54,8 @@ Two libraries (`libs/logs.py`) were developed for monitoring pipeline failures, 
 The DAG `ambev_data_quality_pipeline` performs validation on the silver layer of the table. The library used for these validations is ***great_expectations***.
 
 After performing 5 validations, the result is saved in a log file (`/scripts/validation_results.txt`), reporting the ***final validation percentage***.
+![image](https://github.com/user-attachments/assets/b20d9e8c-6567-48cd-91c6-d48dc421d422)
+
 
 In the parameter file (`dags/parameters_data_quality.yaml`) of the same DAG, it is possible to set a minimum acceptance value for the table's Data Quality:
 `data_quality_percentage: 60.00`
