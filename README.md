@@ -64,7 +64,9 @@ In the parameter file (`dags/parameters_data_quality.yaml`) of the same DAG, it 
 `data_quality_percentage: 60.00`. 
 
 In this case, the valid is when the % is "greater than 60.00%".
+
 ![image](https://github.com/user-attachments/assets/57c1d4ad-3c83-49b6-a3bf-3fa15bce3c2b)
+
 
 Finally, if the table does not meet the Data Quality standards, it will ***alert/notify*** a Discord channel.
 
