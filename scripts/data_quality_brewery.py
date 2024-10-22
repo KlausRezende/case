@@ -14,7 +14,10 @@ spark = SparkSession.builder \
     .appName("klaus_session") \
     .getOrCreate()
 
-df = spark.read.parquet("/opt/airflow/silver_layer/")
+try:
+    df = spark.read.parquet("/opt/airflow/silver_layer/")
+except:
+    sys.exit()
 
 dataframe_datasource = context.sources.add_or_update_spark(
     name="spark_memory"
