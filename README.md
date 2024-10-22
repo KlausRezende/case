@@ -2,7 +2,7 @@
 
 This project performs the **ETL** (Extraction, Transformation, and Loading) of Ambev brewery data.
 
-![image](https://github.com/user-attachments/assets/a5541d67-47cf-4b23-82ab-c611e1efeffb)
+![image](https://github.com/user-attachments/assets/67f4b523-6f32-4859-98bc-b8683a91a219)
 
 
 ## Requirements
