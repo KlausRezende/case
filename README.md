@@ -69,7 +69,7 @@ Finally, if the table does not meet the Data Quality standards, it will ***alert
 
 
 ### Note
-When you activate the two DAGs for the first time, they automatically start running based on the defined start_date. As a result, the data_quality DAG will initially fail due to the absence of files, which is caused by the folder cleaning command in Step 2. However, after the main pipeline finishes executing, the data_quality DAG will run successfully without any issues. So, no need worries about the initial failure, they are expected and the process is functioning as intended.
+When you activate the two DAGs for the first time, they automatically start running based on the defined start_date. As a result, the data_quality DAG will initially fail because there are no files, which is caused by the folder cleaning command in Step 2. However, after the main pipeline finishes executing, the data_quality DAG will run successfully without any issues. So, no worries about the initial failure, they are expected and the process is functioning as intended.
 
 
 
