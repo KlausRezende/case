@@ -17,7 +17,7 @@ This project performs the **ETL** (Extraction, Transformation, and Loading) of A
     clone repo && git clone <"url">
     cd case
     ```
-2. Clean the folders:
+2. Clean the folders: (optional)
     ```
     rm -rf bronze_layer/*
     rm -rf silver_layer/*
@@ -68,7 +68,9 @@ Finally, if the table does not meet the Data Quality standards, it will ***alert
 ![image](https://github.com/user-attachments/assets/5094cd7e-da3d-48a8-9c89-995c6c76e0b9)
 
 
-
+### Note
+When you activate the two DAG's for the first time they run the flow automatically because of the "start_date" defined.
+Therefore, the dataquality dag will immediately return an error as it has no files due to the folder cleaning command.
 
 
 
