@@ -17,7 +17,7 @@ This project performs the **ETL** (Extraction, Transformation, and Loading) of A
     clone repo && git clone <"url">
     cd case
     ```
-2. Clean the folders: (optional)
+2. Clean the folders:
     ```
     rm -rf bronze_layer/*
     rm -rf silver_layer/*
@@ -68,7 +68,7 @@ Finally, if the table does not meet the Data Quality standards, it will ***alert
 ![image](https://github.com/user-attachments/assets/5094cd7e-da3d-48a8-9c89-995c6c76e0b9)
 
 
-### Note
+### Note:
 When you activate the two DAGs for the first time, they automatically start running based on the defined start_date. As a result, the data_quality DAG will initially fail because there are no files, which is caused by the folder cleaning command in Step 2. However, after the main pipeline finishes executing, the data_quality DAG will run successfully without any issues. So, no worries about the initial failure, they are expected and the process is functioning as intended.
 
 
